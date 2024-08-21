@@ -1,8 +1,8 @@
 import { Cabecalho1Props,Cabecalho2Props } from "../../types";
 
-function Cabecalho({paginaProps,nrPagProps,statusProps,avisoProps}:Cabecalho1props & Cabecalho2Props){
+function Cabecalho({paginaProps,nrPaginaProps,children,statusProps,avisoProps}:Cabecalho1Props & Cabecalho2Props){
 
-        document.title = statusProps =" - "nrPaginaProps;
+        document.title = statusProps+" - "+nrPaginaProps;
 
     return(
         <header>
@@ -10,6 +10,10 @@ function Cabecalho({paginaProps,nrPagProps,statusProps,avisoProps}:Cabecalho1pro
             <div>
                 <button onClick={()=> avisoProps()}>Aviso</button>
             </div>
+            <div>
+                {children}
+            </div>
         </header>
         );
     }
+    export default Cabecalho;
