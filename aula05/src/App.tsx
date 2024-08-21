@@ -4,7 +4,7 @@ function App(){
 
   const titulo:string= "Minha página!"
   
-const aviso = ()=> alert(titulo)
+  const aviso = ()=> alert(titulo);
 
   return (
     <div>

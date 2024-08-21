@@ -1,7 +1,18 @@
-function Cabecalho(props:{tituloProps:string}){
+type CabecalhoProps = {
+    tituloProps:string,
+    avisoProps:()=> void;
+}
+
+function Cabecalho({tituloProps, avisoProps}:CabecalhoProps){
+
+    document.title = tituloProps;
+
     return(
         <header>
-            <h1>{props.tituloProps}</h1>
+            <h1>{tituloProps}</h1>
+            <div>
+                <button onClick={()=> avisoProps()}>Aviso</button>
+            </div>
         </header>
     );
 }
