@@ -2,3 +2,13 @@ export type CabecalhoProps = {
     tituloProps:string;
     avisoProps:Function;
 }
+
+export type Cabecalho1Props = {
+    paginaProps:string;
+    nrPaginaProps:number | string;
+}
+
+export type Cabecalho2Props = {
+    statusProps:"loading" | "deployed" | "xuxu";
+    avisoProps:Function;
+}
