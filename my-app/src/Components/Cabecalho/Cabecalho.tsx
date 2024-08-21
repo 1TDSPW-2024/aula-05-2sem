@@ -1,11 +1,18 @@
-function Cabecalho(props: { tituloProps: string; avisoProps: () => void }) {
+type CabecalhoProps = {
+  paginaProps: string;
+  avisoProps: () => void;
+  nrPaginaProps: number | string;
+  statusProps: "loading" | "deployed";
+};
+
+function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, statusProps }: CabecalhoProps) {
   // addEventListener("click", () => {});
-  document.title = tituloProps;
+  document.title = statusProps + "-" + nrPaginaProps;
   return (
     <header>
-      <h1>{props.tituloProps}</h1>
+      <h1>{paginaProps}</h1>
       <div>
-        <button onClick={() => props.avisoProps()}>Aviso</button>
+        <button onClick={() => avisoProps()}>Aviso</button>
       </div>
       <div></div>
     </header>
