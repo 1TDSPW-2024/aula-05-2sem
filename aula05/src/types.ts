@@ -1,5 +1,14 @@
 export type CabecalhoProps = {
     tituloProps:string;
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-    avisoProprs:Function;
+    avisoProps:function;
+}
+
+export typer Cabecalho1Props = {
+    paginaProps:string;
+    nrPaginaProps:number | string;
+}
+
+export type Cabecalho2Props = {
+    statusProps:"loading" | "deployed" | "batata";
+    avisoProps:Function; 
 }
