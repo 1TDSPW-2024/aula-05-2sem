@@ -1,11 +1,15 @@
-type CabecalhoProps = {
+type Cabecalho1Props = {
   paginaProps: string;
-  avisoProps: () => void;
+
   nrPaginaProps: number | string;
+};
+
+type Cabecalho2Props = {
+  avisoProps: () => void;
   statusProps: "loading" | "deployed";
 };
 
-function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, statusProps }: CabecalhoProps) {
+function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, statusProps }: Cabecalho1Props & Cabecalho2Props) {
   // addEventListener("click", () => {});
   document.title = statusProps + "-" + nrPaginaProps;
   return (
