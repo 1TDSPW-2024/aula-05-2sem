@@ -1,15 +1,15 @@
 type Cabecalho1Props = {
   paginaProps: string;
-
   nrPaginaProps: number | string;
+  children: React.ReactNode;
 };
 
-type Cabecalho2Props = {
+interface Cabecalho2Props {
   avisoProps: () => void;
   statusProps: "loading" | "deployed";
-};
+}
 
-function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, statusProps }: Cabecalho1Props & Cabecalho2Props) {
+function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, children, statusProps }: Cabecalho1Props & Cabecalho2Props) {
   // addEventListener("click", () => {});
   document.title = statusProps + "-" + nrPaginaProps;
   return (
@@ -18,7 +18,7 @@ function Cabecalho({ paginaProps, avisoProps, nrPaginaProps, statusProps }: Cabe
       <div>
         <button onClick={() => avisoProps()}>Aviso</button>
       </div>
-      <div></div>
+      <div>{children}</div>
     </header>
   );
 }
