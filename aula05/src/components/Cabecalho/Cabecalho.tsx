@@ -17,3 +17,4 @@ function Cabecalho({paginaProps,nrPaginaProps,children,statusProps,avisoProps}:C
         );
     }
     export default Cabecalho;
+    
